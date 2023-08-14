@@ -11,6 +11,7 @@ class HelloWorld extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Oswald',
       ),
       home: const FirstScreen(),
     );
