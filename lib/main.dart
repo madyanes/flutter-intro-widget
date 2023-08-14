@@ -66,7 +66,7 @@ class OtherScreen extends StatefulWidget {
 }
 
 class OtherScreenState extends State<OtherScreen> {
-  String _name = '';
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -83,11 +83,7 @@ class OtherScreenState extends State<OtherScreen> {
                 hintText: 'Write your name here...',
                 labelText: 'Your Name',
               ),
-              onChanged: (String value) {
-                setState(() {
-                  _name = value;
-                });
-              },
+              controller: _controller,
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -97,7 +93,7 @@ class OtherScreenState extends State<OtherScreen> {
                   context: context,
                   builder: (context) {
                     return AlertDialog(
-                      content: Text('Hello, $_name'),
+                      content: Text('Hello, ${_controller.text}'),
                     );
                   },
                 );
@@ -107,5 +103,11 @@ class OtherScreenState extends State<OtherScreen> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
