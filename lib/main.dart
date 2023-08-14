@@ -12,7 +12,7 @@ class HelloWorld extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OtherScreen(),
+      home: const FirstScreen(),
     );
   }
 }
@@ -42,13 +42,8 @@ class FirstScreen extends StatelessWidget {
           onPressed: () {},
         ),
       ),
-      body: const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Icon(Icons.share),
-          Icon(Icons.thumb_up),
-          Icon(Icons.thumb_down),
-        ],
+      body: Center(
+        child: Image.asset('images/android.png', width: 200, height: 200),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
