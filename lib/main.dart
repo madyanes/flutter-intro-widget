@@ -34,6 +34,13 @@ class FirstScreen extends StatelessWidget {
             onPressed: () {},
           ),
         ],
+        leading: IconButton(
+          icon: const Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
+          onPressed: () {},
+        ),
       ),
     );
   }
