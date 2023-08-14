@@ -46,6 +46,13 @@ class FirstScreen extends StatelessWidget {
         decoration: const BoxDecoration(
           color: Colors.red,
           shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black,
+              offset: Offset(3, 6),
+              blurRadius: 10,
+            ),
+          ],
         ),
         child: const Text(
           'Madyan',
