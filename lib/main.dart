@@ -43,10 +43,11 @@ class FirstScreen extends StatelessWidget {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: Colors.red,
           shape: BoxShape.circle,
-          boxShadow: [
+          border: Border.all(color: Colors.green, width: 3),
+          boxShadow: const [
             BoxShadow(
               color: Colors.black,
               offset: Offset(3, 6),
