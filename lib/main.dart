@@ -12,7 +12,7 @@ class HelloWorld extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FirstScreen(),
+      home: const OtherScreen(),
     );
   }
 }
@@ -53,6 +53,58 @@ class FirstScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {},
+      ),
+    );
+  }
+}
+
+class OtherScreen extends StatefulWidget {
+  const OtherScreen({Key? key}) : super(key: key);
+
+  @override
+  OtherScreenState createState() => OtherScreenState();
+}
+
+class OtherScreenState extends State<OtherScreen> {
+  String _name = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('First Screen'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              decoration: const InputDecoration(
+                hintText: 'Write your name here...',
+                labelText: 'Your Name',
+              ),
+              onChanged: (String value) {
+                setState(() {
+                  _name = value;
+                });
+              },
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              child: const Text('Submit'),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      content: Text('Hello, $_name'),
+                    );
+                  },
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
