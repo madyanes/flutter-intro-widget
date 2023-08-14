@@ -43,7 +43,10 @@ class FirstScreen extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Colors.blue,
+        decoration: const BoxDecoration(
+          color: Colors.red,
+        ),
+        // color: Colors.blue, // jika tidak ditandai sebagai komentar akan menyebabkan eror
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.all(10),
         child: const Text(
