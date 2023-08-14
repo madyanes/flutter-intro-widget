@@ -42,24 +42,13 @@ class FirstScreen extends StatelessWidget {
           onPressed: () {},
         ),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.red,
-          shape: BoxShape.rectangle,
-          border: Border.all(color: Colors.green, width: 3),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black,
-              offset: Offset(3, 6),
-              blurRadius: 10,
-            ),
-          ],
-        ),
-        child: const Text(
-          'Madyan',
-          style: TextStyle(fontSize: 40),
-        ),
+      body: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Icon(Icons.share),
+          Icon(Icons.thumb_up),
+          Icon(Icons.thumb_down),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
