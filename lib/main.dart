@@ -12,11 +12,16 @@ class HelloWorld extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Halo, dunia!'),
-        ),
-      ),
+      home: const FirstScreen(),
     );
+  }
+}
+
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
   }
 }
