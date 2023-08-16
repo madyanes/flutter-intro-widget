@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intro_widget/expanded_flexible_page.dart';
+import 'package:intro_widget/navigation_screen.dart';
 
 void main() => runApp(const HelloWorld());
 
@@ -14,7 +14,7 @@ class HelloWorld extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Oswald',
       ),
-      home: const ExpandedFlexiblePage(),
+      home: const FirstScreen(),
     );
   }
 }
