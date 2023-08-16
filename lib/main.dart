@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intro_widget/navigation_screen.dart';
+import 'package:intro_widget/media_query.dart';
 
 void main() => runApp(const HelloWorld());
 
@@ -14,7 +14,7 @@ class HelloWorld extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Oswald',
       ),
-      home: const FirstScreen(),
+      home: const HomePage(),
     );
   }
 }
