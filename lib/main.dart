@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intro_widget/media_query.dart';
+import 'package:intro_widget/layout_builder.dart';
 
 void main() => runApp(const HelloWorld());
 
