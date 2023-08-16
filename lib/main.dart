@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intro_widget/layout_builder.dart';
+import 'package:intro_widget/responsive_page.dart';
 
 void main() => runApp(const HelloWorld());
 
@@ -14,7 +14,7 @@ class HelloWorld extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Oswald',
       ),
-      home: const HomePage(),
+      home: const ResponsivePage(),
     );
   }
 }
