@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+  final String message;
+
+  const SecondScreen(this.message, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +12,17 @@ class SecondScreen extends StatelessWidget {
         title: const Text('Second Screen'),
       ),
       body: Center(
-        child: OutlinedButton(
-          child: const Text('Kembali'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(message),
+            OutlinedButton(
+              child: const Text('Kembali'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
         ),
       ),
     );
@@ -23,6 +31,8 @@ class SecondScreen extends StatelessWidget {
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
+
+  final String message = 'Hello from First Screen!';
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +44,8 @@ class FirstScreen extends StatelessWidget {
         child: ElevatedButton(
           child: const Text('Pindah Screen'),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const SecondScreen();
-            }));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SecondScreen(message)));
           },
         ),
       ),
